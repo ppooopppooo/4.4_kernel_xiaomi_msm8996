@@ -201,6 +201,8 @@ static int __init msm_sensor_init_module(void)
 
 	init_waitqueue_head(&s_init->state_wait);
 
+	turn_on_wide_camera();
+
 	return 0;
 error:
 	mutex_destroy(&s_init->imutex);
